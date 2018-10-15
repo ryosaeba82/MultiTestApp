@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">MultiTestApp</string>
+    <string name="app_name">Applicazione di test</string>
+    <string name="splash_screen">SPLASH SCREEN</string>
 </resources>
