@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Applicazione di test</string>
-    <string name="splash_screen">SPLASH SCREEN</string>
-    <string name="pref_SplashScreen">SplashScreen</string>
+    <string name="app_name">Test application</string>
+    <string name="splash_screen" translatable="false">SPLASH SCREEN</string>
+    <string name="button_exit_txt">Exit</string>
+
+
 </resources>
