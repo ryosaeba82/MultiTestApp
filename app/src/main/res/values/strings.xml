@@ -2,6 +2,7 @@
     <string name="app_name">Test application</string>
     <string name="splash_screen" translatable="false">SPLASH SCREEN</string>
     <string name="button_exit_txt">Exit</string>
+    <string name="button_call_txt">Call</string>
 
 
 </resources>

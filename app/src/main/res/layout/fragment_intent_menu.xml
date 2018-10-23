@@ -7,4 +7,8 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <Button
+            android:text="@string/button_call_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" android:id="@+id/button_call"/>
 </FrameLayout>
