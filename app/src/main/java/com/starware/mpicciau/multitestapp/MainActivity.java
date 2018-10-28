@@ -10,7 +10,7 @@ public class MainActivity extends AppCompatActivity {
 
     private TabAdapter adapter;
     private ViewPager viewPager;
-    private TabLayout tabLayout;
+    private CustomTabLayout tabLayout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

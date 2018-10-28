@@ -3,4 +3,5 @@
     <string name="app_name">Applicazione di test</string>
     <string name="button_exit_txt">Esci</string>
     <string name="button_call_txt">Chiama</string>
+    <string name="edit_phone_hint">Inserisci numero di telefono</string>
 </resources>

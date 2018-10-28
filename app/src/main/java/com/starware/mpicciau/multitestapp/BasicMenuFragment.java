@@ -26,4 +26,8 @@ public class BasicMenuFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_basic_menu, container, false);
     }
 
+    public void onExitClick(View v){
+        System.exit(0);
+    }
+
 }

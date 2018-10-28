@@ -1,6 +1,7 @@
 package com.starware.mpicciau.multitestapp;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,4 +27,8 @@ public class IntentMenuFragment extends Fragment {
         return inflater.inflate(R.layout.fragment_intent_menu, container, false);
     }
 
+    public void onCallClick(View v){
+        Intent intent = new Intent(getActivity(),CallActivity.class);
+        getActivity().startActivity(intent);
+    }
 }
