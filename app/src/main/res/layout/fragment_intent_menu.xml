@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/IntentLayout"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".IntentMenuFragment">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/IntentLayout"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              tools:context=".IntentMenuFragment" android:orientation="horizontal">
 
     <!-- TODO: Update blank fragment layout -->
 
     <Button
-        android:id="@+id/button_call"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="@string/button_call_txt"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+            android:id="@+id/button_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/button_call_txt"
+            style="@style/Widget.AppCompat.Button" android:layout_margin="8dp"/>
+    <Button
+            android:id="@+id/button_geo"
+            android:text="@string/button_geo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.AppCompat.Button" android:layout_margin="8dp"/>
+</LinearLayout>
