@@ -7,4 +7,5 @@
     <string name="empty_phone_nb">Numero di telefono vuoto. Si prega di inserirlo.</string>
     <string name="button_contacts">Contatti</string>
     <string name="button_geo">Geolocalizzazione</string>
+    <string name="startInternet">Lancia Internet</string>
 </resources>

@@ -2,6 +2,7 @@ package com.starware.mpicciau.multitestapp;
 
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -21,7 +22,15 @@ public class IntentMenuFragment extends Fragment {
     }
 
     private void Geolocation_execute(View view){
+        Uri locationUri = Uri.parse("geo:41.8957703,12.4803852?z=17");
+        Intent implicitIntent = new Intent(Intent.ACTION_VIEW, locationUri);
+        startActivity(implicitIntent);
+    }
 
+    private void StartUrl_execute(View view){
+        Uri webUri = Uri.parse("http://www.google.it");
+        Intent implicitIntent = new Intent(Intent.ACTION_VIEW,webUri);
+        startActivity(implicitIntent);
     }
 
     @Override
@@ -46,6 +55,15 @@ public class IntentMenuFragment extends Fragment {
             @Override
             public void onClick(View view){
                 Geolocation_execute(view);
+            }
+        });
+
+        //Button Start Internet
+        Button button_web = view.findViewById(R.id.button_web);
+        button_web.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                StartUrl_execute(view);
             }
         });
 
