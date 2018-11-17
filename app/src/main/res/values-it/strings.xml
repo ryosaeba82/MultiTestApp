@@ -8,4 +8,6 @@
     <string name="button_contacts">Contatti</string>
     <string name="button_geo">Geolocalizzazione</string>
     <string name="startInternet">Lancia Internet</string>
+    <string name="hint_contacts">cerca un contatto</string>
+    <string name="button_search_contact">Cerca contatto</string>
 </resources>

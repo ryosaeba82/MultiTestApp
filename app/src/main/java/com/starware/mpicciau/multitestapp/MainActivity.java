@@ -1,7 +1,6 @@
 package com.starware.mpicciau.multitestapp;
 
 
-import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -23,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         adapter = new TabAdapter(getSupportFragmentManager());
         adapter.addFragment(new BasicMenuFragment(), "Basic");
         adapter.addFragment(new IntentMenuFragment(), "Intent");
+        adapter.addFragment(new ContactsFragment(), "Contacts");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

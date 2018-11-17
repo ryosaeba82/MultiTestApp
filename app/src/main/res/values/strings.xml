@@ -8,6 +8,7 @@
     <string name="button_contacts">Contacts</string>
     <string name="button_geo">Geolocation</string>
     <string name="startInternet">Start browser</string>
-
+    <string name="hint_contacts">search a contact</string>
+    <string name="button_search_contact">Search contact</string>
 
 </resources>
