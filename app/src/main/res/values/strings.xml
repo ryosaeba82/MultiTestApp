@@ -10,5 +10,8 @@
     <string name="startInternet">Start browser</string>
     <string name="hint_contacts">search a contact</string>
     <string name="button_search_contact">Search contact</string>
+    <string name="alert_no_contacts">No Contacts found</string>
+    <string name="alert_contactsearch_empty">Please insert a search query</string>
+    <string name="alert_no_permission">Permission denied</string>
 
 </resources>

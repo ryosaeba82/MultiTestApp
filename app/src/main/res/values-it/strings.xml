@@ -10,4 +10,7 @@
     <string name="startInternet">Lancia Internet</string>
     <string name="hint_contacts">cerca un contatto</string>
     <string name="button_search_contact">Cerca contatto</string>
+    <string name="alert_no_contacts">Nessun contatto trovato</string>
+    <string name="alert_contactsearch_empty">Inserire una stringa di ricerca</string>
+    <string name="alert_no_permission">Permesso negato</string>
 </resources>
