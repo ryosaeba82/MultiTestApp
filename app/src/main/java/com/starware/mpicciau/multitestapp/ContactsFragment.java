@@ -2,6 +2,7 @@ package com.starware.mpicciau.multitestapp;
 
 import android.Manifest;
 import android.content.ContentResolver;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
@@ -19,17 +20,26 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 
-public class ContactsFragment extends Fragment {
+public class ContactsFragment extends Fragment implements AdapterView.OnItemClickListener {
 
     ListView contactsListView;
     EditText contactText;
+    ArrayList<String> data;
+    HashMap<String, Long> nameToId;
+    HashMap<String, String> nameToLookupKey;
 
     public ContactsFragment() {
         // Required empty public constructor
     }
 
     private void ShowContact(AdapterView<?> arg0, View arg1, int position, long arg3){
-
+        String contactName = data.get(position);
+        Long contactId = nameToId.get(contactName);
+        String lookup = nameToLookupKey.get(contactName);
+        Uri contactUri = ContactsContract.Contacts.getLookupUri(contactId,lookup);
+        Intent editContactIntent = new Intent(Intent.ACTION_EDIT);
+        editContactIntent.setDataAndType(contactUri,ContactsContract.Contacts.CONTENT_ITEM_TYPE);
+        startActivity(editContactIntent);
     }
 
     //Ricerca dei contatti utilizzando come stringa di ricerca il contenuto della edittext
@@ -60,9 +70,9 @@ public class ContactsFragment extends Fragment {
 
         if ( cursor.getCount() > 0 )
         {
-            ArrayList<String> data = new ArrayList<String>();
-            HashMap<String, Long> nameToId = new HashMap<String, Long>();
-            HashMap<String, String> nameToLookupKey = new HashMap<String, String>();
+            data = new ArrayList<String>();
+            nameToId = new HashMap<String, Long>();
+            nameToLookupKey = new HashMap<String, String>();
             while ( cursor.moveToNext() )
             {
                 String name = cursor.getString(cursor.getColumnIndex(contactName));
@@ -77,13 +87,7 @@ public class ContactsFragment extends Fragment {
             int layout = Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB ? android.R.layout.simple_list_item_activated_1 : android.R.layout.simple_list_item_1;
             contactsListView.setAdapter(new ArrayAdapter<String>(getActivity(),layout,data));
             //impostazione evento click sul contatto
-            contactsListView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-                @Override
-                public void onItemClick(AdapterView<?> arg0, View arg1,
-                                        int position, long arg3){
-                    ShowContact(arg0, arg1, position, arg3);
-                }
-            });
+            contactsListView.setOnItemClickListener(this);
         }
         else
         {
@@ -116,4 +120,8 @@ public class ContactsFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+        ShowContact(parent,view,position,id);
+    }
 }
