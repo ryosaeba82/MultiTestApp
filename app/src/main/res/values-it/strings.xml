@@ -13,4 +13,11 @@
     <string name="alert_no_contacts">Nessun contatto trovato</string>
     <string name="alert_contactsearch_empty">Inserire una stringa di ricerca</string>
     <string name="alert_no_permission">Permesso negato</string>
+    <string name="button_create_contact">Aggiungi contatto</string>
+    <string name="editTextNome_hint_message">Nome</string>
+    <string name="editTextPhone_hint_message">Telefono di casa</string>
+    <string name="editTextSecondPhone_hint_message">Cellulare</string>
+    <string name="buttonCreaContactText">Crea contatto</string>
+    <string name="noName">Inserire il nome</string>
+    <string name="noPhone">Inserire il telefono</string>
 </resources>

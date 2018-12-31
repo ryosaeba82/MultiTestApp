@@ -32,6 +32,11 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemClic
         // Required empty public constructor
     }
 
+    private void CreateContact_execute(View view){
+        Intent intent = new Intent(getActivity(),CreateContactActivity.class);
+        startActivity(intent);
+    }
+
     private void ShowContact(AdapterView<?> arg0, View arg1, int position, long arg3){
         String contactName = data.get(position);
         Long contactId = nameToId.get(contactName);
@@ -115,6 +120,15 @@ public class ContactsFragment extends Fragment implements AdapterView.OnItemClic
             @Override
             public void onClick(View view){
                 SearchContact_execute(view);
+            }
+        });
+
+        //Button Create contact
+        Button button_create = view.findViewById(R.id.button_createContact);
+        button_create.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                CreateContact_execute(view);
             }
         });
         return view;
