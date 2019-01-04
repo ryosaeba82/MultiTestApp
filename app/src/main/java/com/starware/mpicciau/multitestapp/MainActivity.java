@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new BasicMenuFragment(), "Basic");
         adapter.addFragment(new IntentMenuFragment(), "Intent");
         adapter.addFragment(new ContactsFragment(), "Contacts");
+        adapter.addFragment(new MultimediaFragment(), "Multimedia");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
