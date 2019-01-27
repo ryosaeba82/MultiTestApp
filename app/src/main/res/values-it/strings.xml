@@ -20,4 +20,12 @@
     <string name="buttonCreaContactText">Crea contatto</string>
     <string name="noName">Inserire il nome</string>
     <string name="noPhone">Inserire il telefono</string>
+    <string name="textViewRingModeText">Modo suoneria</string>
+    <string name="radioButtonNormalText">Normale</string>
+    <string name="radioButtonSilentText">Silenzioso</string>
+    <string name="radioButtonVibrateText">Vibrazione</string>
+    <string name="buttonChooseModeText">Seleziona</string>
+    <string name="ringerModeNormalText">Normale</string>
+    <string name="ringerModeSilentText">Silenzioso</string>
+    <string name="ringerModeVibrateText">Vibrazione</string>
 </resources>

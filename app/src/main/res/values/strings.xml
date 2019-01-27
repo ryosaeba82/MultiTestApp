@@ -22,8 +22,13 @@
     <string name="buttonCreaContactOnClick" translatable="false">createContact</string>
     <string name="noName">Insert the name</string>
     <string name="noPhone">Insert the phone</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="textViewRingModeText">Ring mode</string>
+    <string name="radioButtonNormalText">Normal</string>
+    <string name="radioButtonSilentText">Silent</string>
+    <string name="radioButtonVibrateText">Vibrate</string>
+    <string name="buttonChooseModeText">Select</string>
+    <string name="ringerModeNormalText">Normal</string>
+    <string name="ringerModeSilentText">Silent</string>
+    <string name="ringerModeVibrateText">Vibrate</string>
 
 </resources>

@@ -2,6 +2,8 @@ package com.starware.mpicciau.multitestapp;
 
 
 import android.Manifest;
+import android.app.NotificationManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
@@ -14,6 +16,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     private static final int READ_CONTACTS_PERMISSIONS_REQUEST = 1;
+    private static final int SOUND_MODE_PERMISSIONS_REQUEST = 2;
     private TabAdapter adapter;
     private ViewPager viewPager;
     private CustomTabLayout tabLayout;
@@ -36,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.setupWithViewPager(viewPager);
 
         getPermissionToReadUserContacts();
+        getPermissionToSetSoundMode();
+    }
+
+    public void getPermissionToSetSoundMode() {
+        NotificationManager n = (NotificationManager) getApplicationContext().getSystemService(getApplicationContext().NOTIFICATION_SERVICE);
+        if(n.isNotificationPolicyAccessGranted()) {
+            //do nothing
+        }else{
+            // Ask the user to grant access
+            Intent intent = new Intent(android.provider.Settings.ACTION_NOTIFICATION_POLICY_ACCESS_SETTINGS);
+            startActivity(intent);
+        }
     }
 
     public void getPermissionToReadUserContacts() {
@@ -62,8 +77,10 @@ public class MainActivity extends AppCompatActivity {
         // Make sure it's our original READ_CONTACTS request
         if (requestCode == READ_CONTACTS_PERMISSIONS_REQUEST) {
 
-        } else {
+        }
+        else {
             super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }
