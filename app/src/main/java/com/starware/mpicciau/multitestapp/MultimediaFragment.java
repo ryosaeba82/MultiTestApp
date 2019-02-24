@@ -2,6 +2,7 @@ package com.starware.mpicciau.multitestapp;
 
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -50,6 +51,24 @@ public class MultimediaFragment extends Fragment {
         Toast.makeText(getActivity().getApplicationContext(),text,Toast.LENGTH_LONG).show();
     }
 
+    void IncreaseVolume(View view) {
+        audioManager.adjustVolume(AudioManager.ADJUST_RAISE,AudioManager.FLAG_SHOW_UI);
+        String text = getResources().getString(R.string.volumeUpText);
+        Toast.makeText(getActivity().getApplicationContext(),text,Toast.LENGTH_SHORT).show();
+    }
+
+    void DecreaseVolume(View view) {
+        audioManager.adjustVolume(AudioManager.ADJUST_LOWER,AudioManager.FLAG_SHOW_UI);
+        String text = getResources().getString(R.string.volumeDownText);
+        Toast.makeText(getActivity().getApplicationContext(),text,Toast.LENGTH_SHORT).show();
+    }
+
+    void StartRecorder(View view){
+        Intent intent = new Intent(getActivity().getApplicationContext(),RecordAudioActivity.class);
+        startActivity(intent);
+
+    }
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -70,6 +89,32 @@ public class MultimediaFragment extends Fragment {
                 ImpostaSuono(view);
             }
         });
+
+        Button button_increase = view.findViewById(R.id.buttonIncreaseVolumeId);
+        button_increase.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                IncreaseVolume(view);
+            }
+        });
+
+        Button button_decrease = view.findViewById(R.id.buttonDecreaseVolumeId);
+        button_decrease.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                DecreaseVolume(view);
+            }
+        });
+
+        Button button_recorder = view.findViewById(R.id.buttonApriRecordAudioActivityId);
+        button_recorder.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                StartRecorder(view);
+            }
+        });
+
+
 
         return(view);
     }

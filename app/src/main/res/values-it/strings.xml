@@ -28,4 +28,14 @@
     <string name="ringerModeNormalText">Normale</string>
     <string name="ringerModeSilentText">Silenzioso</string>
     <string name="ringerModeVibrateText">Vibrazione</string>
+    <string name="buttonIncreaseVolumeText">Aumenta volume</string>
+    <string name="buttonDecreaseVolumeText">Diminuisci volume</string>
+    <string name="volumeUpText">Volume aumentato</string>
+    <string name="volumeDownText">Volume diminuito</string>
+    <string name="buttonApriRecordAudioActivityText">Apri registratore audio</string>
+    <string name="buttonStopRecordAudioText">Ferma registrazione</string>
+    <string name="buttonPlayAudioText">Ascolta audio</string>
+    <string name="recordAudioText">Registrazione</string>
+    <string name="playAudioText">In ascolto</string>
+    <string name="buttonRecordAudioText">Registra audio</string>
 </resources>

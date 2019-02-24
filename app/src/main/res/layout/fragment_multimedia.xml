@@ -47,5 +47,20 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/buttonChooseModeText" />
+    <Button
+            android:id="@+id/buttonIncreaseVolumeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonIncreaseVolumeText"/>
+    <Button
+            android:id="@+id/buttonDecreaseVolumeId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonDecreaseVolumeText" />
+    <Button
+            android:id="@+id/buttonApriRecordAudioActivityId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/buttonApriRecordAudioActivityText" />
 
 </LinearLayout>
