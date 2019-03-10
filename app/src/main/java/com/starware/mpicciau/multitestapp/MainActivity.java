@@ -34,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new IntentMenuFragment(), "Intent");
         adapter.addFragment(new ContactsFragment(), "Contacts");
         adapter.addFragment(new MultimediaFragment(), "Multimedia");
+        adapter.addFragment(new CameraFragment(), "Camera");
 
         viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);

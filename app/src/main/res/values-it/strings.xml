@@ -38,4 +38,6 @@
     <string name="recordAudioText">Registrazione</string>
     <string name="playAudioText">In ascolto</string>
     <string name="buttonRecordAudioText">Registra audio</string>
+    <string name="buttonPhotoText">Foto</string>
+    <string name="buttonVideoText">Video</string>
 </resources>

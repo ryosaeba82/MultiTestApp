@@ -45,4 +45,8 @@
     <string name="buttonStopRecordAudioOnClick" translatable="false">stopRecordAudio</string>
     <string name="buttonPlayAudioOnClick" translatable="false">playAudio</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="buttonPhotoText">Photo</string>
+    <string name="buttonVideoText">Video</string>
+
 </resources>
