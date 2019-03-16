@@ -40,4 +40,6 @@
     <string name="buttonRecordAudioText">Registra audio</string>
     <string name="buttonPhotoText">Foto</string>
     <string name="buttonVideoText">Video</string>
+    <string name="buttonOpenUrlText">Apri URL</string>
+    <string name="noNetwork">Nessuna rete disponibile</string>
 </resources>

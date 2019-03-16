@@ -49,4 +49,8 @@
     <string name="buttonPhotoText">Photo</string>
     <string name="buttonVideoText">Video</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="buttonOpenUrlText">Open URL</string>
+    <string name="noNetwork">No network available</string>
+
 </resources>

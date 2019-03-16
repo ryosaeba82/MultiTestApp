@@ -13,8 +13,6 @@ public class Utils {
 
     public static int[] getScreenSize(Context context) {
         int[] widthHeight = new int[2];
-        widthHeight[WIDTH_INDEX] = 0;
-        widthHeight[HEIGHT_INDEX] = 0;
 
         WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
         Display display = windowManager.getDefaultDisplay();
@@ -27,15 +25,17 @@ public class Utils {
         if (!isScreenSizeRetrieved(widthHeight)) {
             DisplayMetrics metrics = new DisplayMetrics();
             display.getMetrics(metrics);
-            widthHeight[0] = metrics.widthPixels;
-            widthHeight[1] = metrics.heightPixels;
+            widthHeight[WIDTH_INDEX] = metrics.widthPixels;
+            widthHeight[HEIGHT_INDEX] = metrics.heightPixels;
         }
 
+        /*
         // Last defense. Use deprecated API that was introduced in lower than API 13
         if (!isScreenSizeRetrieved(widthHeight)) {
-            widthHeight[0] = display.getWidth(); // deprecated
-            widthHeight[1] = display.getHeight(); // deprecated
+            widthHeight[WIDTH_INDEX] = display.getWidth(); // deprecated
+            widthHeight[HEIGHT_INDEX] = display.getHeight(); // deprecated
         }
+        */
 
         return widthHeight;
     }
